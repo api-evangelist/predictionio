@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: >-
+  https://predictionio.apache.org/ retirement notice and
+  https://attic.apache.org/projects/predictionio.html (2026-07-20)
+name: PredictionIO Lifecycle
+description: >-
+  Lifecycle and maintenance status for Apache PredictionIO. The project has been
+  retired and moved to the Apache Attic; it is no longer actively developed or
+  maintained.
+status: retired
+retired: true
+statement: >-
+  "This project has retired. For details please refer to its Attic page."
+  (predictionio.apache.org)
+history:
+- milestone: Founded as prediction.io by TappingStone (open source ML server).
+- milestone: Acquired by Salesforce (2016) and donated to the Apache Software Foundation.
+- milestone: Incubated and graduated as a top-level Apache project (Apache PredictionIO).
+- milestone: Moved to the Apache Attic (retired, unmaintained).
+attic_url: https://attic.apache.org/projects/predictionio.html
+source_repo: https://github.com/apache/predictionio
+versioning:
+  scheme: semver
+  note: >-
+    Releases were published under org.apache.predictionio; final releases remain
+    available on Maven Central and language package registries but receive no
+    further updates.
+status_page: null
+sla: null
+deprecation_policy: >-
+  No formal deprecation/sunset policy or Sunset/Deprecation (RFC 8594) HTTP
+  headers documented. The entire project is retired.

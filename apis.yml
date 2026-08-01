@@ -1,7 +1,15 @@
 aid: predictionio
 name: PredictionIO
-description: PredictionIO is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Apache PredictionIO is an open source machine learning server that lets
+  developers and data scientists build, deploy, and serve predictive engines as
+  web services. Originally the commercial product prediction.io from TappingStone,
+  it was acquired by Salesforce in 2016, donated to the Apache Software Foundation,
+  and graduated as a top-level Apache project before being retired to the Apache
+  Attic. It exposes a REST-based Event Server for collecting event data and an
+  Engine Query API for real-time predictions, built on Apache Spark, MLlib, HBase,
+  Elasticsearch, and Akka HTTP, with official SDKs for Python, Ruby, PHP, and
+  Scala/Java. This profile enriches the original portfolio-lead stub.
 url: https://raw.githubusercontent.com/api-evangelist/predictionio/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +17,59 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://predictionio.apache.org/images/logos/logo.png
 tags:
 - Company
-apis: []
+- Machine Learning
+- Artificial Intelligence
+- Predictive Analytics
+- Recommendation Engine
+- Open Source
+- Apache
+- Event Server
+- Retired
+apis:
+- name: PredictionIO Event Server API
+  description: >-
+    REST API for importing and querying event data used to train prediction
+    engines. Authenticated with a per-app access key passed as the accessKey
+    query parameter; JSON request/response with .json path suffixes.
+  humanURL: https://predictionio.apache.org/datacollection/eventapi/
+  baseURL: http://localhost:7070
+  tags:
+  - Event Server
+  - Data Collection
+  properties:
+  - type: Documentation
+    url: https://predictionio.apache.org/datacollection/eventapi/
+  - type: Authentication
+    url: authentication/predictionio-authentication.yml
+  - type: Conventions
+    url: conventions/predictionio-conventions.yml
+- name: PredictionIO Engine Query API
+  description: >-
+    REST API exposed by a deployed prediction engine that responds to prediction
+    queries in real time (POST /queries.json). Unauthenticated by default.
+  humanURL: https://predictionio.apache.org/deploy/
+  baseURL: http://localhost:8000
+  tags:
+  - Predictions
+  - Engine
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +77,31 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://prediction.io
+  url: https://predictionio.apache.org
+- type: Documentation
+  url: https://predictionio.apache.org/start/
+- type: APIReference
+  url: https://predictionio.apache.org/datacollection/eventapi/
+- type: GettingStarted
+  url: https://predictionio.apache.org/start/
+- type: GitHubOrganization
+  url: https://github.com/apache/predictionio
+- type: SDKs
+  url: packages/predictionio-packages.yml
+- type: Packages
+  url: packages/predictionio-packages.yml
+- type: Authentication
+  url: authentication/predictionio-authentication.yml
+- type: Conventions
+  url: conventions/predictionio-conventions.yml
+- type: Lifecycle
+  url: lifecycle/predictionio-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/predictionio-lifecycle.yml
+- type: WellKnown
+  url: well-known/predictionio-well-known.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

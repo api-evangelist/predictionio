@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://predictionio.apache.org/datacollection/eventapi/ (2026-07-20)
+name: PredictionIO API Conventions
+description: >-
+  Cross-cutting request/response conventions for the Apache PredictionIO Event
+  Server REST API and Engine Query API.
+auth:
+  style: api-key-query
+  header: null
+  param: accessKey
+  see: ../authentication/predictionio-authentication.yml
+content_type: application/json
+resource_format: >-
+  Event Server resources use a `.json` suffix on the path (e.g. /events.json,
+  /events/<eventId>.json).
+identifiers:
+  event_id: >-
+    Server-generated opaque `eventId` returned on event creation and used to
+    address individual events.
+pagination:
+  style: query-parameter-filter
+  params:
+  - startTime
+  - untilTime
+  - entityType
+  - entityId
+  - limit
+  - reversed
+  note: >-
+    List events (GET /events.json) supports time-window and entity filters
+    rather than cursor/offset pagination.
+idempotency:
+  supported: false
+  note: >-
+    No idempotency key mechanism is documented; each POST /events.json creates a
+    new event with a fresh eventId.
+versioning:
+  style: none-documented
+  see: ../lifecycle/predictionio-lifecycle.yml
+error_envelope:
+  format: json
+  note: >-
+    Errors are returned as JSON with a `message` field; the API does not
+    implement RFC 9457 problem+json.
+rate_limit_signaling:
+  documented: false

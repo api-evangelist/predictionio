@@ -1,0 +1,42 @@
+generated: '2026-07-20'
+method: searched
+source: PyPI, RubyGems, Packagist, and Maven Central registry lookups (2026-07-20)
+name: PredictionIO Packages
+description: >-
+  First-party client SDKs and server components for Apache PredictionIO, the
+  (now retired / Apache Attic) open source machine learning server. SDKs target
+  the Event Server REST API and Engine Query API.
+packages:
+- name: PredictionIO
+  registry: pypi
+  official: true
+  language: python
+  url: https://pypi.org/project/PredictionIO/
+  latest: 0.9.9
+  description: Official PredictionIO Python SDK for the Event Server and Engine APIs.
+  install: pip install PredictionIO
+- name: predictionio
+  registry: rubygems
+  official: true
+  language: ruby
+  url: https://rubygems.org/gems/predictionio
+  latest: 0.12.1
+  description: Official PredictionIO Ruby SDK.
+  install: gem install predictionio
+- name: predictionio/predictionio
+  registry: packagist
+  official: true
+  language: php
+  url: https://packagist.org/packages/predictionio/predictionio
+  description: Official PredictionIO PHP SDK.
+  install: composer require predictionio/predictionio
+- name: org.apache.predictionio
+  registry: maven-central
+  official: true
+  language: scala
+  url: https://repo1.maven.org/maven2/org/apache/predictionio/
+  description: >-
+    Apache PredictionIO server modules published to Maven Central (core, data,
+    common, tools, e2, and storage backends for Elasticsearch/HBase/HDFS/JDBC/S3),
+    cross-built for Scala 2.10 and 2.11. Includes the Java/Scala SDK surface.
+  install: 'libraryDependencies += "org.apache.predictionio" %% "apache-predictionio-core" % "<version>"'

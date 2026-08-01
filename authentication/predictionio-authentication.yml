@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://predictionio.apache.org/datacollection/eventapi/ (2026-07-20)
+name: PredictionIO Authentication
+description: >-
+  Authentication profile for the Apache PredictionIO Event Server REST API. The
+  Event Server authenticates requests with a per-app access key. Engine query
+  endpoints are unauthenticated by default and rely on network-level controls.
+docs: https://predictionio.apache.org/datacollection/eventapi/
+schemes:
+- id: accessKey
+  type: apiKey
+  in: query
+  name: accessKey
+  applies_to: Event Server API (localhost:7070)
+  description: >-
+    Per-application access key passed as the `accessKey` query parameter on every
+    Event Server request. Generated when an app is created via the CLI command
+    `pio app new`. Example: /events.json?accessKey=yourAccessKeyString
+- id: none
+  type: none
+  applies_to: Engine Query API (localhost:8000)
+  description: >-
+    The deployed prediction engine query endpoint (POST /queries.json) has no
+    built-in authentication; access is expected to be restricted at the network
+    or gateway layer.
+notes: >-
+  No OAuth2, OpenID Connect, or mutual TLS is documented. The access key is an
+  opaque application credential, not an OAuth token, so no scopes apply.

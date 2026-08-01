@@ -1,0 +1,25 @@
+generated: '2026-07-20'
+method: probed
+source: HTTP probes against https://predictionio.apache.org (2026-07-20)
+name: PredictionIO Well-Known Endpoints
+description: >-
+  Probe of standard /.well-known/ discovery endpoints on the live project host.
+  No well-known documents are published (all 404). The original commercial host
+  prediction.io no longer serves a valid TLS certificate.
+host: predictionio.apache.org
+endpoints:
+- path: /.well-known/security.txt
+  status: 404
+  file: null
+- path: /.well-known/openid-configuration
+  status: 404
+  file: null
+- path: /.well-known/oauth-authorization-server
+  status: 404
+  file: null
+- path: /.well-known/api-catalog
+  status: 404
+  file: null
+- path: /.well-known/ai-plugin.json
+  status: 404
+  file: null
