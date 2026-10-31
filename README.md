@@ -64,6 +64,55 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PredictionIO is a company surfaced as a portfolio company of 500-global and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
 
-Backed by: 500-global — https://prediction.io
+**Status:** retired
+
+Apache PredictionIO is an open source machine learning server that lets developers and data scientists build, deploy, and serve predictive engines as web services. Originally the commercial product prediction.io from TappingStone, it was acquired by Salesforce in 2016, donated to the Apache Software Foundation, and graduated as a top-level Apache project before being retired to the Apache Attic. It exposes a REST-based Event Server for collecting event data and an Engine Query API for real-time predictions, built on Apache Spark, MLlib, HBase, Elasticsearch, and Akka HTTP, with official SDKs for Python, Ruby, PHP, and Scala/Java. This profile enriches the original portfolio-lead stub.
+
+**Areas:** Company · Machine Learning · Artificial Intelligence · Predictive Analytics · Recommendation Engine · Open Source · Apache · Event Server · Retired
+
+## PredictionIO on APIs.io (historical record)
+
+Everything profiled for PredictionIO is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/predictionio/](https://apis.io/providers/predictionio/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [PredictionIO Event Server API](https://apis.io/apis/predictionio/predictionio-event-server-api/) — REST API for importing and querying event data used to train prediction engines. Authenticated with a per-app access key passed as the accessKey query…
+- [PredictionIO Engine Query API](https://apis.io/apis/predictionio/predictionio-engine-query-api/) — REST API exposed by a deployed prediction engine that responds to prediction queries in real time (POST /queries.json). Unauthenticated by default.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Predictionio Authentication](https://apis.io/security/predictionio/predictionio-authentication/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://predictionio.apache.org)
+- [Documentation](https://predictionio.apache.org/start/)
+- [Getting started](https://predictionio.apache.org/start/)
+- [API reference](https://predictionio.apache.org/datacollection/eventapi/)
+- [GitHub](https://github.com/apache/predictionio)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PredictionIO: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/predictionio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
